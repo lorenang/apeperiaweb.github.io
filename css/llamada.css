@@ -1,0 +1,57 @@
+.llamada  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--background-blanco);
+    text-align: center;
+    
+    background-color: var(--background-llamada-mobile);
+
+    padding-top: 12.25rem;
+    padding-bottom: 2.5rem;
+}
+
+.llamada__titulo {
+    font-family: var(--open-sans);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+}
+
+.llamada__texto {
+    font-size: 1.25rem;
+    line-height: normal;
+
+    margin: 0 auto 2.5rem;
+}
+
+.llamada__boton {
+    width: 100%;
+}
+ /* EM medida relativa a la fuente size de css, de la etiqueta madre
+ La medida REM es una medida relativa pero con mayor nivel de jerarquia (del HTML)*/
+
+ /*REM es una unidad relativa a la propiedad font-size de la etiqueta, por lo tanto si la etiqueta tiene 16px de font-size 1 REM equivale a 16px. EM es relativa a la propiedad font-size de la etiqueta madre, por lo tanto, si la etiqueta madre es un font-size de 16px, 1 EM equivale a 16px.
+ REM proviene de “Root ephemeral” que en traducción técnica es la “variable de la raíz”, o sea, es una variable en relación de la propiedad font-size de la etiqueta raiz (HTML). EM proviene de “ephemeral” que significa “variable” y es una variable de la propiedad font-size de la etiqueta madre.*/
+
+
+@media screen and (min-width: 768px) {
+    .llamada__texto {
+        max-width: 600px;
+    }
+}
+ @media screen and (min-width: 1024px) {
+    .llamada {
+        background-image: url(../img/bg-intro.jpg);
+        background-size: cover;
+        padding-top: 8.25rem;
+    }
+
+    .llamada__titulo {
+        font-size: 3.25rem;
+        margin-bottom: 2rem;
+    }
+}
